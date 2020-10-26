@@ -13,11 +13,21 @@ ls -al
     stage('SonarQube') {
       steps {
         withSonarQubeEnv(installationName: 'sonarqube-scanner', credentialsId: 'sonar', envOnly: true) {
-          sh '${sonarqube-scanner}/bin/sonar-scanner'
+          sh '''// ${sonarqube-scanner}/bin/sonar-scanner
+
+println ${env.SONAR_TEST} 
+println ${env.SONAR_CONFIG_NAME} 
+println ${env.SONAR_HOST_URL}
+println ${env.SONAR_AUTH_TOKEN}
+println ${sonarqube-scanner}
+println ${SONAR_TEST}'''
         }
 
       }
     }
 
+  }
+  environment {
+    SONAR_TEST = 'ruby'
   }
 }
