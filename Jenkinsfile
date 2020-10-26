@@ -13,7 +13,7 @@ ls -al
     stage('SonarQube') {
       steps {
         withSonarQubeEnv(installationName: 'sonarqube-scanner', credentialsId: 'sonar', envOnly: true) {
-          sh '${scannerHome}/bin/sonar-scanner'
+          sh '${sonarqube-scanner}/bin/sonar-scanner'
         }
 
       }
