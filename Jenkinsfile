@@ -10,5 +10,11 @@ ls -al
       }
     }
 
+    stage('SonarQube') {
+      steps {
+        withSonarQubeEnv(installationName: 'app', credentialsId: 'sonar')
+      }
+    }
+
   }
 }
