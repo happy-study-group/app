@@ -12,7 +12,11 @@ ls -al
 
     stage('SonarQube') {
       steps {
-        withSonarQubeEnv(installationName: 'app', credentialsId: 'sonar')
+        sh '''sonar-scanner \\
+  -Dsonar.projectKey=app \\
+  -Dsonar.sources=. \\
+  -Dsonar.host.url=http://localhost:9000 \\
+  -Dsonar.login=ddc581e3da2a20486790f95811c622c9899c98be'''
       }
     }
 
