@@ -13,14 +13,13 @@ ls -al
     stage('SonarQube') {
       steps {
         withSonarQubeEnv(installationName: 'sonarqube-scanner', credentialsId: 'sonar', envOnly: true) {
-          sh '''// ${sonarqube-scanner}/bin/sonar-scanner
-
-println ${env.SONAR_TEST} 
-println ${env.SONAR_CONFIG_NAME} 
-println ${env.SONAR_HOST_URL}
-println ${env.SONAR_AUTH_TOKEN}
-println ${sonarqube-scanner}
-println ${SONAR_TEST}'''
+          sh '''echo ${env.SONAR_TEST} 
+echo ${env.SONAR_CONFIG_NAME} 
+echo ${env.SONAR_HOST_URL}
+echo ${env.SONAR_AUTH_TOKEN}
+echo ${sonarqube-scanner}
+echo ${SONAR_TEST}
+echo ${sonarqube-scanner}/bin/sonar-scanner'''
         }
 
       }
