@@ -5,6 +5,7 @@
 
 https://drive.google.com/file/d/1RWIvykLchEczREIB8VIlx_xHoJ6uz9EP/view?usp=sharing
 
+
 ## 使用技術
 * Jenkins(pipline)
 * AWS(ECS, EC2, VPC, Lambda, IAM)
@@ -13,6 +14,8 @@ https://drive.google.com/file/d/1RWIvykLchEczREIB8VIlx_xHoJ6uz9EP/view?usp=shari
 * Unit Test
 * Slack(Slash Commands 發送API, Incoming WebHooks 接受通知)
 * GitHub
+
+AWS ECS 介紹: https://www.youtube.com/watch?app=desktop&v=22IsSW3YD0A&amp%3Bfeature=share
 
 ## 功能簡述
 * create EC2(Ubuntu) at AWS（用途：架設服務用）
@@ -81,7 +84,7 @@ https://drive.google.com/file/d/1RWIvykLchEczREIB8VIlx_xHoJ6uz9EP/view?usp=shari
     > `Ctrl + P 及 Ctrl + Q`
 
     * 設定EC2每次啟動或重啟皆會創建 Container
-    > `????`
+    > `docker-compose.yml 中 restart:always`
     
 * 安裝 git
     * pull a project
